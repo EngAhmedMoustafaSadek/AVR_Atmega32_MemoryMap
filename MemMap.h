@@ -347,7 +347,7 @@ void vector (void)*/
 /* External Interrupt Request 2 */
 #define INT2_vect			__vector_3
 /* Timer/Counter2 Compare Match */
-#define TIMER2_COMP_vect		__vector_4
+#define TIMER2_OC_vect		__vector_4
 /* Timer/Counter2 Overflow */
 #define TIMER2_OVF_vect			__vector_5
 /* Timer/Counter1 Capture Event */
@@ -361,7 +361,7 @@ void vector (void)*/
 /* Timer/Counter0 Compare Match */
 #define TIMER0_OC_vect		__vector_10
 /* Timer/Counter0 Overflow */
-#define TIMER0_OVF_vect			__vector_11
+#define TIMER0_OVF_vect		__vector_11
 /* Serial Transfer Complete */
 #define SPI_STC_vect			__vector_12
 /* USART, Rx Complete */
@@ -389,6 +389,8 @@ void vector (void)*/
 # define cli()  __asm__ __volatile__ ("cli" ::)
 # define reti()  __asm__ __volatile__ ("reti" ::)
 # define ret()  __asm__ __volatile__ ("ret" ::)
+
+#define   GLOBAL_INT_ENABLE    sei
 
 #  define ISR_NOBLOCK    __attribute__((interrupt))
 #  define ISR_NAKED      __attribute__((naked))

@@ -23,11 +23,11 @@ typedef enum{
 typedef enum{
 	OK,
 	NOK,
-	NULLPTR,
+	NULL_PTR,
 	OUTOFRANGE
 	}Error_t;
 
-#define NULL_PTR   ((void*)0)
+#define NULLPTR   ((void*)0)
 #define NULL       ((char)0)
 
 #define MAX_U8     ((u8)255)
